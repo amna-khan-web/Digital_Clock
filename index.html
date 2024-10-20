@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital_Clock</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+    <h1>Digital Clock!</h1>
+       <p id="dateTime"></p>
+
+
+
+<script>
+    function displayDateTime() {
+        var now = new Date();
+        var date = now.toLocaleDateString();
+        var time = now.toLocaleTimeString();
+
+        document.getElementById("dateTime").innerHTML = time + " <br>" + date;
+    }
+
+       //update Date
+    displayDateTime();
+
+    // Update the time every second!
+    setInterval(displayDateTime, 1000);
+</script>
+
+</body>
+</html>
